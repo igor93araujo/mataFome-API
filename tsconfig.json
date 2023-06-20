@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "ES2016",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  },
+  // incluir pasta swagger na compilação
+  "include": ["src/**/*", "src/docs/swagger.json"],
+}
