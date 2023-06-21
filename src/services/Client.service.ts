@@ -2,8 +2,6 @@ import { PrismaClient, Client } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-
-
 export default class ClientService {
     public async createClient(client: Client): Promise<Client> {
         return await prisma.client.create({
