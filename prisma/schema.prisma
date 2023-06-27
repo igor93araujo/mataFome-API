@@ -54,7 +54,7 @@ model Product {
 
   description String?
 
-  image String?
+  image String? @db.Text
 
   status Boolean @default(true)
 
@@ -74,9 +74,7 @@ model Sales {
 
   clientId Int
 
-  product Product @relation(fields: [productId], references: [id])
-
-  productId Int
+  products Product[]
 
   total Float
 
