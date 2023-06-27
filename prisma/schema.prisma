@@ -74,7 +74,9 @@ model Sales {
 
   clientId Int
 
-  products Product[]
+  product Product @relation(fields: [productId], references: [id])
+
+  productId Int
 
   total Float
 

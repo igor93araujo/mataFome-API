@@ -27,7 +27,7 @@ CREATE TABLE `Product` (
     `price` DOUBLE NOT NULL,
     `categoryId` INTEGER NOT NULL,
     `description` VARCHAR(191) NULL,
-    `image` VARCHAR(191) NULL,
+    `image` VARCHAR(1000) NULL,
     `status` BOOLEAN NOT NULL DEFAULT true,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
