@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import SalesCreateManyInput from '../src/types/SalesCreateManyInput';
 
 const prisma = new PrismaClient();
 
@@ -183,7 +184,7 @@ async function main() {
         total: 19.99,
       },
       // Adicionar mais vendas aqui...
-    ],
+    ] as SalesCreateManyInput[],
   });
 }
 
