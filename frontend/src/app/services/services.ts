@@ -8,10 +8,11 @@ export const requestAPi = async (category: any) => {
         }
     };
 
-    const request = await fetch(url, options)
-    const data = await request.json();
-
-    
-
-   return data.filter((product: any) => product.categoryId === category);
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data.filter((product: any) => product.categoryId === category);
+    } catch (error) {
+        console.log(error);
+    }
 }
