@@ -26,7 +26,7 @@ export default function Aside() {
 
   return (
     <aside
-      className='bg-red-300 h-[100%] w-[10%] flex justify-center items-center p-5'>
+      className='bg-red-500 h-[100%] w-[10%] flex justify-center items-center p-5'>
         <nav className='flex gap-2 flex-col'>
           <span 
             onClick={() => handleCategory(2)}
