@@ -21,7 +21,7 @@ export default function Content() {
   const { products } = context as contextType;
 
   return (
-    <div className='bg-red-200 h-[100%] w-[90%] flex justify-center items-center'>
+    <div className='flex gap-10 justify-center items-center'>
       {
         products ?
         products.map((product: product) => (

@@ -6,7 +6,7 @@ import { TiShoppingCart } from 'react-icons/ti'
 import { ItemsContext } from '@/app/itemsContext/itemsContext'
 import Loading from '../Loading/page'
 
-export default function Aside() {
+export default function Nav() {
   
   const context = useContext(ItemsContext);
 
@@ -25,36 +25,31 @@ export default function Aside() {
   }
 
   return (
-    <aside
-      className='bg-red-500 h-[100%] w-[10%] flex justify-center items-center p-5'>
-        <nav className='flex gap-2 flex-col'>
+    <section
+      className='w-[100%] flex justify-center'>
+        <nav className='flex gap-5 mb-2'>
           <span 
             onClick={() => handleCategory(2)}
-            className='cursor-pointer'
+            className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
           >
-            <GiFullPizza size='40px'/>
+            <GiFullPizza size='20px'/>
+            <p>Pizza</p>
           </span>
           <span
             onClick={() => handleCategory(3)}
-            className='cursor-pointer'
+            className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
             >
-              <FaHamburger
-                size='40px'
-                
-              />
+              <FaHamburger size='20px' />
+              <p>Burgers</p>
             </span>
             <span
               onClick={() => handleCategory(1)}
-              className='cursor-pointer'
+              className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
             >
-              <GiBeerBottle size='40px'/>
-            </span>
-            <span
-              className='cursor-pointer'
-            >
-              <TiShoppingCart size='40px'/>
+              <GiBeerBottle size='20px'/>
+              <p>Drinks</p>
             </span>
         </nav>
-    </aside>
+    </section>
   )
 }
