@@ -18,9 +18,11 @@ export default function Content() {
     products: Array<product>;
     showProdDetails: boolean;
     setShowProdDetails: Function;
+    productDetails: string;
+    setProductDetails: Function;
   };
 
-  const { products, showProdDetails, setShowProdDetails } = context as unknown as contextType;
+  const { products, showProdDetails, setShowProdDetails, productDetails, setProductDetails } = context as unknown as contextType;
 
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -33,8 +35,9 @@ export default function Content() {
     console.log(`Product ${productId}, added to cart with quantity ${quantity}`);
   };
 
-  const handleShowProdDetails = (productId: number) => {
+  const handleShowProdDetails = ({ name, id, description, price }: product) => {
     setShowProdDetails(true);
+    setProductDetails({ name, id, description, price });
   };
 
   return (
@@ -87,12 +90,16 @@ export default function Content() {
               <p className="text-sm text-yellow-500 font-bold">R$ {product.price},00</p>
               </>
             )}
-                  <button
-                    onClick={() => handleShowProdDetails(parseInt(product.id))}
-                    className="bg-yellow-500 text-white p-2 rounded-full focus:outline-none"
-                  >
-                    Detalhes
-                  </button>
+                  {
+                    product.categoryId !== 1 ? (
+                      <button
+                        onClick={() => handleShowProdDetails(product)}
+                        className="bg-yellow-500 text-white p-2 rounded-full focus:outline-none"
+                      >
+                        Detalhes
+                      </button>
+                    ) : ''
+                  } 
           </div>
         ))}
       </div>

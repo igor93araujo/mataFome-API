@@ -19,12 +19,3 @@
 body {
   @apply bg-yellow-50;
 }
-
-@keyframes prodDetailAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

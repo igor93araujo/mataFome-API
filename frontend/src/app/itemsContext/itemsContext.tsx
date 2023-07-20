@@ -19,6 +19,7 @@ export const ItemsProvider = ({ children }: ItemsProviderProps) => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [showProdDetails, setShowProdDetails] = useState(false);
+  const [productDetails, setProductDetails] = useState('');
 
 
   const getProducts = async (selectedCategory: any) => {
@@ -37,7 +38,8 @@ export const ItemsProvider = ({ children }: ItemsProviderProps) => {
     setProducts,
     showProdDetails,
     setShowProdDetails,
-
+    productDetails,
+    setProductDetails,
   }
 
   return (
