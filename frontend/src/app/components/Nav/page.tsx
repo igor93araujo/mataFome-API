@@ -30,21 +30,21 @@ export default function Nav() {
         <nav className='flex gap-5 mb-2'>
           <span 
             onClick={() => handleCategory(2)}
-            className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
+            className= "navItem"
           >
             <GiFullPizza size='20px'/>
             <p>Pizza</p>
           </span>
           <span
             onClick={() => handleCategory(3)}
-            className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
+            className= "navItem"
             >
               <FaHamburger size='20px' />
               <p>Burgers</p>
             </span>
             <span
               onClick={() => handleCategory(1)}
-              className='cursor-pointer flex items-center gap-2 bg-yellow-300 p-2 rounded-lg hover:bg-yellow-400 transition-colors duration-300'
+              className= "navItem"
             >
               <GiBeerBottle size='20px'/>
               <p>Drinks</p>

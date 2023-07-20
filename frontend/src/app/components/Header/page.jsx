@@ -10,7 +10,7 @@ function Header() {
         <h1>Lanchonete Mata-Fome</h1>
       </div>
       <div className='cursor-pointer mr-5'>
-        <TiShoppingCart size='40px'/>
+        <TiShoppingCart size='40px' />
       </div>
     </header>
   )
