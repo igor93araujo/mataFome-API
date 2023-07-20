@@ -18,6 +18,8 @@ type ItemsProviderProps = {
 export const ItemsProvider = ({ children }: ItemsProviderProps) => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [showProdDetails, setShowProdDetails] = useState(false);
+
 
   const getProducts = async (selectedCategory: any) => {
     const products = await requestAPi(selectedCategory || 2);
@@ -33,6 +35,9 @@ export const ItemsProvider = ({ children }: ItemsProviderProps) => {
     selectedCategory,
     setSelectedCategory,
     setProducts,
+    showProdDetails,
+    setShowProdDetails,
+
   }
 
   return (

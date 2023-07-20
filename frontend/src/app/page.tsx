@@ -7,7 +7,7 @@ import { ItemsProvider } from "./itemsContext/itemsContext"
 export default function Home() {
   return (
     <ItemsProvider>
-      <main className='flex flex-col items-center w-full h-screen '>
+      <main className='flex flex-col items-center w-full h-screen absolute'>
         <Header />
         <Hero />
         <Nav />
