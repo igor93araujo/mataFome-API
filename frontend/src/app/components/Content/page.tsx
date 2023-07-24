@@ -20,19 +20,15 @@ export default function Content() {
     setShowProdDetails: Function;
     productDetails: string;
     setProductDetails: Function;
+    addToCart: Function;
   };
 
-  const { products, showProdDetails, setShowProdDetails, productDetails, setProductDetails } = context as unknown as contextType;
+  const { products, showProdDetails, setShowProdDetails,  addToCart, setProductDetails, quantity, setQuantity} = context as unknown as contextType;
 
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
-  const [quantity, setQuantity] = useState(1);
   
   const handleHoverProduct = (productId: number) => {
     setHoveredProduct(productId);
-  };
-
-  const handleAddToCart = (productId: number) => {
-    console.log(`Product ${productId}, added to cart with quantity ${quantity}`);
   };
 
   const handleShowProdDetails = ({ name, id, description, price }: product) => {
@@ -78,7 +74,7 @@ export default function Content() {
                     +
                   </button>
                   <button
-                    onClick={() => handleAddToCart(parseInt(product.id))}
+                    onClick={() => addToCart(product, quantity)}
                     className="bg-green-500 text-white p-2 rounded-full focus:outline-none"
                   >
                     <AiOutlineShopping size="20px" />
